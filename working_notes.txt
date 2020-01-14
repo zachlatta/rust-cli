@@ -5,3 +5,7 @@ Notes while working through the book. Writing this on Tuesday, January 14th, 202
 So much better to have an opinionated, well-designed tool for this than leaving it to the ecosystem.
 
 Question: What does ? after a variable mean?
+
+Question: What is the difference between unwrap() and expect()? expect just lets you set a custom error message.
+
+Question: What is the difference between Result and Option types? Result: use this for things that may fail, but shouldn't. Option: use this for things that may or may not have a return value. https://www.reddit.com/r/rust/comments/2j0k21/rust_option_vs_result/cl78asx/
