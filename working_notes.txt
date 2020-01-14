@@ -1,0 +1,5 @@
+Notes while working through the book. Writing this on Tuesday, January 14th, 2020 at 12:58PM at Manny's in SF.
+
+`cargo init` for creating new Cargo package in current directory. Cargo toolchain for working with Rust.
+
+So much better to have an opinionated, well-designed tool for this than leaving it to the ecosystem.
