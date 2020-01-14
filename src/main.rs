@@ -1,4 +1,7 @@
 use structopt::StructOpt;
+use std::fs::File;
+use std::io::BufReader;
+use std::io::prelude::*;
 
 #[derive(StructOpt)]
 struct Cli {
@@ -11,9 +14,12 @@ struct Cli {
 fn main() {
     let args = Cli::from_args();
 
-    let content = std::fs::read_to_string(&args.path).expect("could not read file");
+    let file = File::open(&args.path).expect("could not find file");
+    let reader = BufReader::new(file);
 
-    for line in content.lines() {
+    for raw_line in reader.lines() {
+        let line = raw_line.expect("error reading line");
+
         if line.contains(&args.pattern) {
             println!("{}", line);
         }
